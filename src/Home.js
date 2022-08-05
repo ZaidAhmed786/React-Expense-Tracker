@@ -5,7 +5,7 @@ const Home = () => {
     const Objarray = [
         { desc : "Cash", amount : "500"},
         { desc : "book", amount : "-200"},
-        { desc : "tv", amount : "-100"},
+        { desc : "car", amount : "-600"},
     ]
   return (
     <>
