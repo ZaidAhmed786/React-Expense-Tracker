@@ -1,9 +1,16 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Home from './Home';
+import {TransProvider} from './transContext'
 
 function App() {
-  return(<Home/>)
+  return (
+  
+    <TransProvider>  
+    <Home />
+    </TransProvider>
+  
+  )
   
 }
 
