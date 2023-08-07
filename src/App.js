@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import Child from "./Child";
+// import { DataProvider } from "./transactionContextapi";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [items , setItems] = useState([]);
+
+    function handelAddItems(item) {
+        setItems((items)=>[...items, item])
+    }
+return(
+
+    <>
+<Child items={items} handelAddItems={handelAddItems}/>
+{/* <DataProvider>
+</DataProvider> */}
+
+{/* <Child/> */}
+</>
+    
+)
 }
 
 export default App;
